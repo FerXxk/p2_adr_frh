@@ -47,12 +47,8 @@ Se realizaron experimentos con las tres configuraciones de ruido, generando las 
 
 ### 🔵 Caso 1 – Ruido bajo (por defecto)
 Se realizaron las gráficas con valores bajos para la matriz inicial de covarianza (Q) y el ruido añadido a la medida (R)
-
-    ![Filtro de Kalman básico](Graficas/kf_posicion_sinruido.png)
-
-    ![Filtro de Kalman con velocidad](Graficas/kf_vel_sinruido.png)
-
-
+|  ![Filtro de Kalman básico](Graficas/kf_posicion_sinruido.png)|   ![Filtro de Kalman con velocidad](Graficas/kf_vel_sinruido.png)|
+   
 - El filtro sigue con precisión la trayectoria del robot.
 - Estimación muy cercana a la trayectoria real.
 - El modelo confía tanto en el proceso como en la medición.
@@ -60,10 +56,10 @@ Se realizaron las gráficas con valores bajos para la matriz inicial de covarian
 ### 🔴 Caso 2 – Ruido alto en la medida
 Se realizaron las gráficas con valores bajos para la matriz inicial de covarianza (Q). Para el ruido añadido a la medida (R), se multiplicó por 5 quedando: 
 `noise_std = np.array([0.02, 0.02, 0.01, 0.02, 0.02, 0.01])*5`
+|  ![Filtro de Kalman básico](Graficas/kf_posicion_ruidoaltomed.png)|  ![Filtro de Kalman con velocidad](Graficas/kf_vel_ruidoaltomedida.png)|
+    
 
-    ![Filtro de Kalman básico](Graficas/kf_posicion_ruidoaltomed.png)
-
-    ![Filtro de Kalman con velocidad](Graficas/kf_vel_ruidoaltomedida.png)
+    
 
 - El filtro tiene un error importante ya que las mediciones no son nada exactas.
 - La trayectoria estimada es muy errática.
@@ -72,10 +68,10 @@ Se realizaron las gráficas con valores bajos para la matriz inicial de covarian
 ### 🟠 Caso 3 – Ruido alto en el proceso
 Se realizaron las gráficas con valores bajos para el ruido añadido a la medida (R). Para  la matriz inicial de covarianza (Q), se multiplicó por 100 quedando: 
 ` initial_covariance = np.eye(3) * 100 `
+| ![Filtro de Kalman básico](Graficas/kf_posicion_ruidoaltoproceso.png)|  ![Filtro de Kalman con velocidad](Graficas/kf_vel_ruidoaltoproceso.png)|
+    
 
-    ![Filtro de Kalman básico](Graficas/kf_posicion_ruidoaltoproceso.png)
-
-    ![Filtro de Kalman con velocidad](Graficas/kf_vel_ruidoaltoproceso.png)
+   
 
 - El filtro reacciona de forma menos brusca al ruido.
 - En el caso del Filtro de Kalman puro, se genera un pequeño offset que separa la trayectoria estimada de la real.
