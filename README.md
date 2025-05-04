@@ -46,21 +46,39 @@ El código se organiza en los siguientes archivos:
 Se realizaron experimentos con las tres configuraciones de ruido, generando las gráficas correspondientes que se adjuntan como evidencia.
 
 ### 🔵 Caso 1 – Ruido bajo (por defecto)
+Se realizaron las gráficas con valores bajos para la matriz inicial de covarianza (Q) y el ruido añadido a la medida (R)
+
+    ![Filtro de Kalman básico](Graficas/kf_posicion_sinruido.png)
+
+    ![Filtro de Kalman con velocidad](Graficas/kf_vel_sinruido.png)
+
 
 - El filtro sigue con precisión la trayectoria del robot.
-- Estimación muy cercana a la odometría.
+- Estimación muy cercana a la trayectoria real.
 - El modelo confía tanto en el proceso como en la medición.
 
 ### 🔴 Caso 2 – Ruido alto en la medida
+Se realizaron las gráficas con valores bajos para la matriz inicial de covarianza (Q). Para el ruido añadido a la medida (R), se multiplicó por 5 quedando: 
+`noise_std = np.array([0.02, 0.02, 0.01, 0.02, 0.02, 0.01])*5`
 
-- El filtro suaviza las medidas ruidosas correctamente.
-- La trayectoria estimada es menos errática que la observación.
+    ![Filtro de Kalman básico](Graficas/kf_posicion_ruidoaltomed.png)
+
+    ![Filtro de Kalman con velocidad](Graficas/kf_vel_ruidoaltomedida.png)
+
+- El filtro tiene un error importante ya que las mediciones no son nada exactas.
+- La trayectoria estimada es muy errática.
 - Se observa una buena compensación gracias al modelo del movimiento.
 
 ### 🟠 Caso 3 – Ruido alto en el proceso
+Se realizaron las gráficas con valores bajos para el ruido añadido a la medida (R). Para  la matriz inicial de covarianza (Q), se multiplicó por 100 quedando: 
+` initial_covariance = np.eye(3) * 100 `
 
-- El filtro reacciona más rápidamente a los cambios de la observación.
-- Sin embargo, pierde capacidad de suavizado, siguiendo más de cerca el ruido de la medida.
+    ![Filtro de Kalman básico](Graficas/kf_posicion_ruidoaltoproceso.png)
+
+    ![Filtro de Kalman con velocidad](Graficas/kf_vel_ruidoaltoproceso.png)
+
+- El filtro reacciona de forma menos brusca al ruido.
+- En el caso del Filtro de Kalman puro, se genera un pequeño offset que separa la trayectoria estimada de la real.
 - Esto demuestra cómo `Q` (ruido del proceso) afecta directamente la confianza en el modelo dinámico.
 
 ---
