@@ -1,0 +1,25 @@
+[1.172s] Invoking command in '/home/fernando/AdR/p2_ws/src/p2_kf_adr': PYTHONPATH=/home/fernando/AdR/p2_ws/build/p2_kf_adr/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/p2_kf_adr build --build-base /home/fernando/AdR/p2_ws/build/p2_kf_adr/build install --record /home/fernando/AdR/p2_ws/build/p2_kf_adr/install.log --single-version-externally-managed install_data
+[1.575s] running egg_info
+[1.577s] writing ../../build/p2_kf_adr/p2_kf_adr.egg-info/PKG-INFO
+[1.578s] writing dependency_links to ../../build/p2_kf_adr/p2_kf_adr.egg-info/dependency_links.txt
+[1.578s] writing entry points to ../../build/p2_kf_adr/p2_kf_adr.egg-info/entry_points.txt
+[1.578s] writing requirements to ../../build/p2_kf_adr/p2_kf_adr.egg-info/requires.txt
+[1.578s] writing top-level names to ../../build/p2_kf_adr/p2_kf_adr.egg-info/top_level.txt
+[1.581s] reading manifest file '../../build/p2_kf_adr/p2_kf_adr.egg-info/SOURCES.txt'
+[1.582s] writing manifest file '../../build/p2_kf_adr/p2_kf_adr.egg-info/SOURCES.txt'
+[1.582s] running build
+[1.582s] running build_py
+[1.583s] copying p2_kf_adr/sensor_utils.py -> /home/fernando/AdR/p2_ws/build/p2_kf_adr/build/lib/p2_kf_adr
+[1.583s] running install
+[1.584s] running install_lib
+[1.585s] copying /home/fernando/AdR/p2_ws/build/p2_kf_adr/build/lib/p2_kf_adr/sensor_utils.py -> /home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/python3.10/site-packages/p2_kf_adr
+[1.588s] byte-compiling /home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/python3.10/site-packages/p2_kf_adr/sensor_utils.py to sensor_utils.cpython-310.pyc
+[1.593s] running install_data
+[1.594s] running install_egg_info
+[1.596s] removing '/home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/python3.10/site-packages/p2_kf_adr-0.0.0-py3.10.egg-info' (and everything under it)
+[1.596s] Copying ../../build/p2_kf_adr/p2_kf_adr.egg-info to /home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/python3.10/site-packages/p2_kf_adr-0.0.0-py3.10.egg-info
+[1.597s] running install_scripts
+[1.634s] Installing kf_estimation script to /home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/p2_kf_adr
+[1.634s] Installing kf_estimation_vel script to /home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/p2_kf_adr
+[1.635s] writing list of installed files to '/home/fernando/AdR/p2_ws/build/p2_kf_adr/install.log'
+[1.725s] Invoked command in '/home/fernando/AdR/p2_ws/src/p2_kf_adr' returned '0': PYTHONPATH=/home/fernando/AdR/p2_ws/build/p2_kf_adr/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fernando/AdR/p2_ws/install/p2_kf_adr/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/p2_kf_adr build --build-base /home/fernando/AdR/p2_ws/build/p2_kf_adr/build install --record /home/fernando/AdR/p2_ws/build/p2_kf_adr/install.log --single-version-externally-managed install_data
